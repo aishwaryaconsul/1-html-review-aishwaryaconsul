@@ -1,0 +1,40 @@
+footer{ 
+    text-align: center; 
+    padding: 8px; 
+    } 
+        
+         
+    .button:hover{ 
+        background-color:slategray; 
+            } 
+
+    header{
+        background-color: grey;
+        text-align: center; 
+        padding: 8px;
+            }
+
+    h3,h4{
+        text-align: center; 
+        color:grey;
+    }
+
+    h5{text-align: center; }
+
+    #abc{
+        margin:35px; 
+        border: 20px darkgrey solid;
+        background-color: lavender; 
+        border: 2px darkgrey solid;
+        width:70%;
+    }
+
+    .nav-item{
+        color: gainsboro;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    
