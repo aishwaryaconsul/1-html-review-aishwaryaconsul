@@ -40,31 +40,34 @@
         </div>
       </nav>
     
-
+      <div id="app">
     <main> 
         <div class="row"> 
 
             <center>
-            <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <img 
             
-                    src = "img/Randomimg.jpg" alt="Image" height="200px" class="img-responsive"><br> 
+            <div class = "random-img col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <img :src = "image" alt="Image" class="img-responsive">
             </div>
             
             <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <ul>
-                    <li>Name: Arizona Torres</li> 
+                    <li>Name: {{firstname +" "+ lastname}}</li> 
                     
-                    <li>Origin: Australia</li> 
+                    <li>Origin: {{origin}}</li> 
                     
-                    <li>Age: 27</li> 
+                    <li>Age: {{age}}</li> 
                     
-                    <li>Date of Birth: July 31, 1994</li> 
+                    <li>Date of Birth: {{prettyBirthday}}</li> 
 
-                    <li>Email address: <a href = "mailto:artorres@gmail.com" id = "change">artorres@gmail.com</a></li>
+                    <li>Email address: <a v-bind:href ="'mailto:' +  email" id = "change">{{email}}</a></li>
                     
                 </ul> 
+                <form onsubmit="">
+                <button type="submit">Refresh</button>
+                </form>
             </div>
+            
             </center>
     
             
@@ -75,17 +78,30 @@
         </main> 
 
         <footer class = "rows" style = "background-color:lightgray">
-         Phone: 987-654-3210  |  852 Canyon Park, Australia, 86541
-        </footer>
+         Phone: {{cell}}  |  {{snumber +", " + sname + ", " + origin +" "+ postcode}}
+        </footer> 
+      </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- CDN example (unpkg) 
+    
+    <script>dayjs().format()</script>-->
+
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="js/index.js"></script>
+    
   </body>
 </html>
